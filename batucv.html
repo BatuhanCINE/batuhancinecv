@@ -15,6 +15,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: auto;
             margin: 0;
             padding: 0;
             background-color: #f0f2f5;
@@ -28,8 +29,8 @@
             background: #fff;
             display: flex;
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
-            height: fit-content;
-            overflow: hidden;
+            height: auto;
+            min-height: unset;
         }
 
         /* Sol Sütun */
@@ -200,17 +201,19 @@
             margin-bottom: 5px;
         }
         @media print {
-            @page {
-            margin: 0;
-            size: auto;
-        }
-        body {
-        background-color: #fff;
-        }
-        .container {
-        box-shadow: none;
-        width: 100%; /* PDF'e tam oturması için */
-        }
+           .container {
+                box-shadow: none;
+                width: 100%;
+                display: flex !important; /* Sütunların yan yana kalmasını garantiler */
+                height: auto;
+           }
+           body {
+                background-color: #fff;
+           }
+           .container {
+                box-shadow: none;
+                width: 100%; /* PDF'e tam oturması için */
+           }
 }
     </style>
 </head>
@@ -409,3 +412,4 @@
 </body>
 
 </html>
+
