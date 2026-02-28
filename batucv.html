@@ -28,7 +28,8 @@
             background: #fff;
             display: flex;
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
-            min-height: auto;
+            height: fit-content;
+            overflow: hidden;
         }
 
         /* Sol Sütun */
@@ -198,6 +199,19 @@
         li {
             margin-bottom: 5px;
         }
+        @media print {
+            @page {
+            margin: 0;
+            size: auto;
+        }
+        body {
+        background-color: #fff;
+        }
+        .container {
+        box-shadow: none;
+        width: 100%; /* PDF'e tam oturması için */
+        }
+}
     </style>
 </head>
 <body>
@@ -393,4 +407,5 @@
 </div>
 
 </body>
+
 </html>
