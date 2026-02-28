@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Tasarımı</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --sidebar-bg: #e9ecef;
+            --main-text: #333;
+            --accent-blue: #3a75b4;
+            --border-color: #3a75b4;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: var(--main-text);
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 800px;
+            background: #fff;
+            display: flex;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            min-height: auto;
+        }
+
+        /* Sol Sütun */
+        .sidebar {
+            width: 35%;
+            background-color: var(--sidebar-bg);
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .profile-img-container {
+            width: 100%;
+            background-color: #e9ecef;
+            padding: 20px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 220px;
+            background-color: white;
+            border-radius: 4px;
+            object-fit: cover;
+        }
+
+        .sidebar-content {
+            padding: 20px;
+        }
+
+        .sidebar-section {
+            margin-bottom: 30px;
+        }
+
+        .sidebar-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #555;
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .sidebar-title i {
+            margin-right: 10px;
+            color: #666;
+        }
+
+        .contact-item, .info-item {
+            font-size: 13px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-item i {
+            width: 25px;
+            color: var(--accent-blue);
+        }
+
+        .info-table {
+            width: 100%;
+            font-size: 13px;
+        }
+
+        .info-table td {
+            padding: 3px 0;
+        }
+
+        .info-label {
+            font-weight: bold;
+            width: 100px;
+        }
+
+        .list-item {
+            font-size: 13px;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        /* Sağ Sütun */
+        .main-content {
+            width: 65%;
+            padding: 40px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            color: var(--accent-blue);
+            margin: 0;
+            letter-spacing: 2px;
+            font-size: 32px;
+        }
+
+        .header p {
+            margin: 5px 0;
+            color: #666;
+            font-size: 18px;
+        }
+
+        .main-section {
+            margin-bottom: 25px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .section-header h2 {
+            font-size: 16px;
+            color: var(--accent-blue);
+            text-transform: uppercase;
+            margin: 0 15px;
+            white-space: nowrap;
+        }
+
+        .section-header i {
+            font-size: 20px;
+            color: var(--accent-blue);
+        }
+
+        .section-header .line {
+            height: 2px;
+            background-color: var(--accent-blue);
+            flex-grow: 1;
+        }
+
+        .content-block {
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .content-block p {
+            line-height: 1.6;
+            margin: 5px 0;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .entry-subheader {
+            display: flex;
+            justify-content: space-between;
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="sidebar">
+        <div class="profile-img-container">
+            <img src="cvprofil.jpeg" alt="Batuhan Çine" class="profile-img">
+        </div>
+
+        <div class="sidebar-content">
+            <div class="sidebar-section">
+                <div class="sidebar-title"><i class="fas fa-bullhorn"></i>İLETİŞİM</div>
+                <div class="contact-item"><i class="fas fa-phone"></i> +90 543 301 46 85</div>
+                <div class="contact-item"><i class="fas fa-envelope"></i> batuhancine7474@gmail.com</div>
+                <div class="contact-item"><i class="fa-brands fa-github"></i> https://github.com/BatuhanCINE</div>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title"><i class="fas fa-user"></i>KİŞİSEL BİLGİLER</div>
+                <table class="info-table">
+                    <tr><td class="info-label">Doğum Tarihi</td><td>: 5 Aralık 2002</td></tr>
+                    <tr><td class="info-label">Doğum Yeri</td><td>: Bartın</td></tr>
+                    <tr><td class="info-label">Kan Grubu</td><td>: B Rh+</td></tr>
+                    <tr><td class="info-label">Sürücü Belgesi</td><td>: B</td></tr>
+                    <tr><td class="info-label">Medeni Durum</td><td>: Bekar</td></tr>
+                    <tr><td class="info-label">Uyruk</td><td>: Türkiye Cumhuriyeti</td></tr>
+                </table>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title"><i class="fas fa-thumbs-up"></i>YETENEKLER</div>
+                 <div class="content-block">
+                <div class="entry-header">
+                    <span>Kodlama:</span>
+                </div>
+                <div class="entry-subheader">
+                    <span>C/C++, C#, HTML, JavaScript, CSS, Java, DataBase, PHP ,MySql, Linux</span>
+                </div>
+                <div class="entry-header">
+                    <span>Dil:</span>
+                </div>
+                <table class="info-table">
+                    <tr><td class="info-label">İngilizce</td><td>: Orta Seviye</td></tr>
+                    <tr><td class="info-label">Japonca</td><td>: Başlangıç</td></tr>
+                </table>
+            </div>
+                
+
+            <div class="sidebar-section">
+                <div class="sidebar-title"><i class="fas fa-certificate"></i>SERTİFİKALAR VE KURSLAR</div>
+                <div class="list-item"><strong>CODE SPRINT Katılım Sertifikası (TalentCoders.co)</strong></div>
+            </div>
+            <div class="sidebar-section">
+                <div class="sidebar-title"><i class="fa-solid fa-comment"></i>SOSYAL MEDYA</div>
+                <table class="info-table">
+                    <tr><td class="info-label">Instagram</td><td>: batuhancinee</td></tr>
+                </table>
+            </div>
+            <div class="sidebar-section">
+                <div class="sidebar-title"><i class="fa-solid fa-location-dot"></i>ADRES</div>
+                <table class="info-table">
+                    <tr><td class="info-label">Adres</td><td>: Bartın, Merkez</td></tr>
+                </table>
+                </div>
+            </div>
+        </div>
+    </div>    
+    
+    <div class="main-content">
+        <div class="header">
+            <h1>BATUHAN ÇİNE</h1>
+        </div>
+        <div class="main-section">
+            <div class="section-header">
+                <i class="fas fa-graduation-cap"></i>
+                <h2>EĞİTİM BİLGİSİ</h2>
+                <div class="line"></div>
+            </div>
+            <div class="content-block">
+                <div class="entry-header">
+                    <span>Bilgisayar Mühendisliği</span>
+                    <span>2022-Devam Ediyor</span>
+                </div>
+                <div class="entry-subheader">
+                    <span>Karabük Üniversitesi, Karabük</span>
+                </div>
+                <ul>
+                    <li>Sınıf: 3</li>
+                </ul>
+            </div>
+            <div class="content-block">
+                <div class="entry-header">
+                    <span>Lise</span>
+                </div>
+                <div class="entry-subheader">
+                    <span>Fatih Sultan Mehmet Anadolu Lisesi, Bartın</span>
+                    <span>2017-2019</span>
+                </div>
+            </div>
+            <div class="content-block">
+                <div class="entry-header">
+                </div>
+                <div class="entry-subheader">
+                    <span>Eğitim Bilimleri Koleji, Bartın</span>
+                    <span>2019-2021</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-section">
+            <div class="section-header">
+                <i class="fa-solid fa-computer"></i>
+                <h2>PROGRAMLAR</h2>
+                <div class="line"></div>
+            </div>
+            <div class="content-block">
+                <div class="entry-header">
+                    <span>Visual Studio Code</span>
+                </div>
+                <div class="entry-header">
+                    <span>Visual Studio</span>
+                </div>
+                <div class="entry-header">
+                    <span>Dev-C++</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-section">
+            <div class="section-header">
+                <i class="fas fa-tasks"></i>
+                <h2>PROJELER VE KULÜPLER</h2>
+                <div class="line"></div>
+            </div>
+            <div class="content-block">
+                <div class="entry-header">TÜBİTAK</div>
+                <div class="entry-subheader">Fatih Sultan Mehmet Anadolu Lisesi, 2017</div>
+                <p>Açıklama: Omega 3 nedir, insan sağlığına faydaları nedir, hangi besinlerde bulunur bunla alaklı sunum yapma ve sunma.</p>
+            </div>
+            <div class="content-block">
+                <div class="entry-header">Bilgisayar Mühendisliği Öğrencisi</div>
+                <div class="entry-subheader">Karabük Üniversitesi</div>
+                <p>Açıklama: Kullanıcıların yemek sipariş verip yorum ve puanlama yapabileceği restoran sitesi oluşturma.</p>
+                <p>Açıklama: DataBase dersi kapsamında SQL kullanarak veritabanı oluşturma ve yönetme.</p>
+                <p>Açıklama: Data Communication dersi kapsamında TCP/IP protokollerini kullanarak ağ iletişimi kurma.</p>
+            </div>
+        </div>
+        <div class="main-section">
+            <div class="section-header">
+                <i class="fa-solid fa-football"></i>
+                <h2>İLGİ ALANLARI</h2>
+                <div class="line"></div>
+            </div>
+            <div class="content-block">
+                <div class="entry-header">
+                    <span>Seyahat</span>
+                </div>
+                <div class="entry-header">
+                    <span>Futbol</span>
+                </div>
+                <div class="entry-header">
+                    <span>Voleybol</span>
+                </div>
+                <div class="entry-header">
+                    <span>Masa Tenisi</span>
+                </div>
+                <div class="entry-header">
+                    <span>Kort Tenisi</span>
+                </div>
+                <div class="entry-header">
+                    <span>Müzik</span>
+                </div>
+                <div class="entry-header">
+                    <span>Basketbol</span>
+                </div>
+                <div class="entry-header">
+                    <span>Yüzmek</span>
+                </div>
+                <div class="entry-header">
+                    <span>Fotoğraf Çekmek</span>
+                </div>
+                <div class="entry-header">
+                    <span>Koşu ve Yürüyüş</span>
+                </div>
+                <div class="entry-header">
+                    <span>Film ve Dizi İzlemek</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
